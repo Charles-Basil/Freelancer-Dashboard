@@ -1,13 +1,31 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Calendar, Code, CreditCard, Home, MessageSquare, PieChart, Settings, Star, User, Users } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useState } from "react";
+import {
+  Calendar,
+  Code,
+  CreditCard,
+  Home,
+  MessageSquare,
+  PieChart,
+  Settings,
+  Star,
+  User,
+  Users,
+} from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,11 +33,11 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Sheet, SheetContent } from "@/components/ui/sheet"
+} from "@/components/ui/dropdown-menu";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 
 export default function Dashboard() {
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   // Tech stack with icons
   const techStack = [
@@ -32,7 +50,7 @@ export default function Dashboard() {
     { name: "Python", level: 75 },
     { name: "Java", level: 70 },
     { name: "PHP", level: 65 },
-  ]
+  ];
 
   return (
     <div className="flex min-h-screen w-full bg-muted/40">
@@ -40,7 +58,10 @@ export default function Dashboard() {
       <aside className="hidden w-64 flex-col border-r bg-background p-6 md:flex">
         <div className="flex items-center gap-3 pb-6">
           <Avatar className="h-10 w-10">
-            <AvatarImage src="/placeholder.svg?height=40&width=40" alt="Avatar" />
+            <AvatarImage
+              src="/placeholder.svg?height=40&width=40"
+              alt="Avatar"
+            />
             <AvatarFallback>CB</AvatarFallback>
           </Avatar>
           <div>
@@ -91,7 +112,9 @@ export default function Dashboard() {
             <CardContent className="p-4">
               <div className="flex flex-col gap-2">
                 <p className="text-sm font-medium">Upgrade to Pro</p>
-                <p className="text-xs text-muted-foreground">Get more features and priority support</p>
+                <p className="text-xs text-muted-foreground">
+                  Get more features and priority support
+                </p>
                 <Button size="sm" className="mt-2">
                   Upgrade
                 </Button>
@@ -107,48 +130,89 @@ export default function Dashboard() {
           <div className="flex h-full flex-col">
             <div className="flex items-center gap-3 border-b p-6">
               <Avatar className="h-10 w-10">
-                <AvatarImage src="/placeholder.svg?height=40&width=40" alt="Avatar" />
+                <AvatarImage
+                  src="/placeholder.svg?height=40&width=40"
+                  alt="Avatar"
+                />
                 <AvatarFallback>CB</AvatarFallback>
               </Avatar>
               <div>
                 <h3 className="font-medium">Charles Basil</h3>
-                <p className="text-xs text-muted-foreground">Frontend Developer</p>
+                <p className="text-xs text-muted-foreground">
+                  Frontend Developer
+                </p>
               </div>
             </div>
             <nav className="flex-1 space-y-1.5 p-6">
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <Home className="h-4 w-4" />
                 Dashboard
               </Button>
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <User className="h-4 w-4" />
                 Profile
               </Button>
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <PieChart className="h-4 w-4" />
                 Projects
               </Button>
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <Code className="h-4 w-4" />
                 Skills
               </Button>
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <Users className="h-4 w-4" />
                 Clients
               </Button>
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <MessageSquare className="h-4 w-4" />
                 Messages
               </Button>
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <CreditCard className="h-4 w-4" />
                 Payments
               </Button>
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <Calendar className="h-4 w-4" />
                 Schedule
               </Button>
-              <Button variant="ghost" className="w-full justify-start gap-3" onClick={() => setIsMobileNavOpen(false)}>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setIsMobileNavOpen(false)}
+              >
                 <Settings className="h-4 w-4" />
                 Settings
               </Button>
@@ -158,7 +222,9 @@ export default function Dashboard() {
                 <CardContent className="p-4">
                   <div className="flex flex-col gap-2">
                     <p className="text-sm font-medium">Upgrade to Pro</p>
-                    <p className="text-xs text-muted-foreground">Get more features and priority support</p>
+                    <p className="text-xs text-muted-foreground">
+                      Get more features and priority support
+                    </p>
                     <Button size="sm" className="mt-2">
                       Upgrade
                     </Button>
@@ -174,7 +240,12 @@ export default function Dashboard() {
       <main className="flex-1">
         {/* Header */}
         <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background px-6">
-          <Button variant="outline" size="icon" className="md:hidden" onClick={() => setIsMobileNavOpen(true)}>
+          <Button
+            variant="outline"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setIsMobileNavOpen(true)}
+          >
             <Menu className="h-5 w-5" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
@@ -188,7 +259,10 @@ export default function Dashboard() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="rounded-full">
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src="/placeholder.svg?height=32&width=32" alt="Avatar" />
+                    <AvatarImage
+                      src="/placeholder.svg?height=32&width=32"
+                      alt="Avatar"
+                    />
                     <AvatarFallback>CB</AvatarFallback>
                   </Avatar>
                 </Button>
@@ -222,7 +296,9 @@ export default function Dashboard() {
                     <Badge variant="outline">2 steps left</Badge>
                   </div>
                   <Progress value={92} className="mt-3" />
-                  <div className="mt-3 text-xs text-muted-foreground">Complete your profile to increase visibility</div>
+                  <div className="mt-3 text-xs text-muted-foreground">
+                    Complete your profile to increase visibility
+                  </div>
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" size="sm" className="w-full">
@@ -240,7 +316,9 @@ export default function Dashboard() {
                     <div className="text-2xl font-bold">1,842</div>
                     <Badge className="bg-green-500">+18%</Badge>
                   </div>
-                  <div className="mt-3 text-xs text-muted-foreground">Last 30 days</div>
+                  <div className="mt-3 text-xs text-muted-foreground">
+                    Last 30 days
+                  </div>
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" size="sm" className="w-full">
@@ -258,7 +336,9 @@ export default function Dashboard() {
                     <div className="text-2xl font-bold">Open to Work</div>
                     <Badge className="bg-green-500">Available</Badge>
                   </div>
-                  <div className="mt-3 text-xs text-muted-foreground">Next availability: Immediate</div>
+                  <div className="mt-3 text-xs text-muted-foreground">
+                    Next availability: Immediate
+                  </div>
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" size="sm" className="w-full">
@@ -288,7 +368,9 @@ export default function Dashboard() {
                     <div key={tech.name} className="space-y-1">
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">{tech.name}</span>
-                        <span className="text-sm text-muted-foreground">{tech.level}%</span>
+                        <span className="text-sm text-muted-foreground">
+                          {tech.level}%
+                        </span>
                       </div>
                       <Progress value={tech.level} />
                     </div>
@@ -315,20 +397,29 @@ export default function Dashboard() {
                 <CardContent>
                   <div className="flex items-center gap-2">
                     <Badge variant="outline">Completed</Badge>
-                    <span className="text-sm text-muted-foreground">Apr 2, 2025</span>
+                    <span className="text-sm text-muted-foreground">
+                      Apr 2, 2025
+                    </span>
                   </div>
                   <div className="mt-4 text-sm">
-                    Built a responsive e-commerce platform with React, improving conversion rates by 24%.
+                    Built a responsive e-commerce platform with React, improving
+                    conversion rates by 24%.
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <div className="flex -space-x-2">
                     <Avatar className="border-2 border-background">
-                      <AvatarImage src="/placeholder.svg?height=32&width=32" alt="Client" />
+                      <AvatarImage
+                        src="/placeholder.svg?height=32&width=32"
+                        alt="Client"
+                      />
                       <AvatarFallback>C1</AvatarFallback>
                     </Avatar>
                     <Avatar className="border-2 border-background">
-                      <AvatarImage src="/placeholder.svg?height=32&width=32" alt="Client" />
+                      <AvatarImage
+                        src="/placeholder.svg?height=32&width=32"
+                        alt="Client"
+                      />
                       <AvatarFallback>C2</AvatarFallback>
                     </Avatar>
                   </div>
@@ -346,16 +437,22 @@ export default function Dashboard() {
                 <CardContent>
                   <div className="flex items-center gap-2">
                     <Badge variant="outline">In Progress</Badge>
-                    <span className="text-sm text-muted-foreground">Due Apr 15, 2025</span>
+                    <span className="text-sm text-muted-foreground">
+                      Due Apr 15, 2025
+                    </span>
                   </div>
                   <div className="mt-4 text-sm">
-                    Creating a comprehensive admin dashboard with React, Node.js, and TypeScript.
+                    Creating a comprehensive admin dashboard with React,
+                    Node.js, and TypeScript.
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <div className="flex -space-x-2">
                     <Avatar className="border-2 border-background">
-                      <AvatarImage src="/placeholder.svg?height=32&width=32" alt="Client" />
+                      <AvatarImage
+                        src="/placeholder.svg?height=32&width=32"
+                        alt="Client"
+                      />
                       <AvatarFallback>C3</AvatarFallback>
                     </Avatar>
                   </div>
@@ -373,16 +470,22 @@ export default function Dashboard() {
                 <CardContent>
                   <div className="flex items-center gap-2">
                     <Badge variant="outline">Completed</Badge>
-                    <span className="text-sm text-muted-foreground">Mar 28, 2025</span>
+                    <span className="text-sm text-muted-foreground">
+                      Mar 28, 2025
+                    </span>
                   </div>
                   <div className="mt-4 text-sm">
-                    Developed a responsive mobile app interface with React Native and TypeScript.
+                    Developed a responsive mobile app interface with React
+                    Native and TypeScript.
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <div className="flex -space-x-2">
                     <Avatar className="border-2 border-background">
-                      <AvatarImage src="/placeholder.svg?height=32&width=32" alt="Client" />
+                      <AvatarImage
+                        src="/placeholder.svg?height=32&width=32"
+                        alt="Client"
+                      />
                       <AvatarFallback>C4</AvatarFallback>
                     </Avatar>
                   </div>
@@ -408,7 +511,10 @@ export default function Dashboard() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <Avatar>
-                        <AvatarImage src="/placeholder.svg?height=40&width=40" alt="Client" />
+                        <AvatarImage
+                          src="/placeholder.svg?height=40&width=40"
+                          alt="Client"
+                        />
                         <AvatarFallback>JD</AvatarFallback>
                       </Avatar>
                       <div>
@@ -418,19 +524,25 @@ export default function Dashboard() {
                     </div>
                     <div className="flex">
                       {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        <Star
+                          key={star}
+                          className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                        />
                       ))}
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm">
-                    "Charles delivered exceptional work on our e-commerce platform. His attention to detail and
-                    expertise in React resulted in a significant improvement in our conversion rates. Highly
-                    recommended!"
+                    Charles delivered exceptional work on our e-commerce
+                    platform. His attention to detail and expertise in React
+                    resulted in a significant improvement in our conversion
+                    rates. Highly recommended!
                   </p>
                 </CardContent>
-                <CardFooter className="text-xs text-muted-foreground">April 2, 2025</CardFooter>
+                <CardFooter className="text-xs text-muted-foreground">
+                  April 2, 2025
+                </CardFooter>
               </Card>
 
               <Card>
@@ -438,7 +550,10 @@ export default function Dashboard() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <Avatar>
-                        <AvatarImage src="/placeholder.svg?height=40&width=40" alt="Client" />
+                        <AvatarImage
+                          src="/placeholder.svg?height=40&width=40"
+                          alt="Client"
+                        />
                         <AvatarFallback>JS</AvatarFallback>
                       </Avatar>
                       <div>
@@ -448,7 +563,10 @@ export default function Dashboard() {
                     </div>
                     <div className="flex">
                       {[1, 2, 3, 4].map((star) => (
-                        <Star key={star} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        <Star
+                          key={star}
+                          className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                        />
                       ))}
                       <Star className="h-4 w-4 text-yellow-400" />
                     </div>
@@ -456,12 +574,17 @@ export default function Dashboard() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm">
-                    "Working with Charles has been a pleasure. His knowledge of modern frontend technologies and ability
-                    to deliver clean, maintainable code has been invaluable to our project. Looking forward to working
-                    together again."
+                    
+                      Working with Charles has been a pleasure. His knowledge of
+                      modern frontend technologies and ability to deliver clean,
+                      maintainable code has been invaluable to our project.
+                      Looking forward to working together again.
+                    
                   </p>
                 </CardContent>
-                <CardFooter className="text-xs text-muted-foreground">March 28, 2025</CardFooter>
+                <CardFooter className="text-xs text-muted-foreground">
+                  March 28, 2025
+                </CardFooter>
               </Card>
             </div>
           </section>
@@ -485,35 +608,45 @@ export default function Dashboard() {
                 <div className="grid gap-6 md:grid-cols-3">
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Total Earnings</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Total Earnings
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">$1,580</div>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-green-500">+15%</span> from last week
+                        <span className="text-green-500">+15%</span> from last
+                        week
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Projects Completed</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Projects Completed
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">4</div>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-green-500">+2</span> from last week
+                        <span className="text-green-500">+2</span> from last
+                        week
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Pending Payments</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Pending Payments
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">$720</div>
-                      <p className="text-xs text-muted-foreground">Due within 7 days</p>
+                      <p className="text-xs text-muted-foreground">
+                        Due within 7 days
+                      </p>
                     </CardContent>
                   </Card>
                 </div>
@@ -543,35 +676,45 @@ export default function Dashboard() {
                 <div className="grid gap-6 md:grid-cols-3">
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Total Earnings</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Total Earnings
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">$6,240</div>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-green-500">+10%</span> from last month
+                        <span className="text-green-500">+10%</span> from last
+                        month
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Projects Completed</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Projects Completed
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">14</div>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-green-500">+3</span> from last month
+                        <span className="text-green-500">+3</span> from last
+                        month
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Pending Payments</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Pending Payments
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">$1,450</div>
-                      <p className="text-xs text-muted-foreground">Due within 30 days</p>
+                      <p className="text-xs text-muted-foreground">
+                        Due within 30 days
+                      </p>
                     </CardContent>
                   </Card>
                 </div>
@@ -606,36 +749,45 @@ export default function Dashboard() {
                 <div className="grid gap-6 md:grid-cols-3">
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Total Earnings</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Total Earnings
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">$72,840</div>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-green-500">+18%</span> from last year
+                        <span className="text-green-500">+18%</span> from last
+                        year
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Projects Completed</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Projects Completed
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">156</div>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-green-500">+28</span> from last year
+                        <span className="text-green-500">+28</span> from last
+                        year
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">Client Retention</CardTitle>
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Client Retention
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold">92%</div>
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-green-500">+8%</span> from last year
+                        <span className="text-green-500">+8%</span> from last
+                        year
                       </p>
                     </CardContent>
                   </Card>
@@ -663,7 +815,7 @@ export default function Dashboard() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 
 function Menu(props) {
@@ -684,5 +836,5 @@ function Menu(props) {
       <line x1="4" x2="20" y1="6" y2="6" />
       <line x1="4" x2="20" y1="18" y2="18" />
     </svg>
-  )
+  );
 }
